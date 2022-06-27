@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{58AD67C5-4613-8DFF-5B89-607014423C5B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs">
+    <Files>
+      <File FileName="Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs" Line="192" Column="1" />
+      <File FileName="Assets/NodeMap/Scripts/Movement/DirectMove.cs" Line="31" Column="11" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="7" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e3a83371-996f-4bb6-ae7d-56105188205e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
