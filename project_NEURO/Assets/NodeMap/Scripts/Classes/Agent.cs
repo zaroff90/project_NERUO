@@ -91,10 +91,16 @@ namespace JSNodeMap {
 		}
 
 		void OnTriggerEnter(Collider other) {
-			Agent otherAgent = other.GetComponent<Agent>();
-			if (otherAgent) {
+            Debug.Log("hi");
+            Agent otherAgent = other.GetComponent<Agent>();
+            if (otherAgent)
+            {
 				// Raise Agent collide event
-				if (OnAgentCollide != null) OnAgentCollide(otherAgent);
+				if (OnAgentCollide != null)
+				{
+					OnAgentCollide(otherAgent);
+					GameObject.Find("GameManager").GetComponent<TurnBasedManager>().GameOver();
+				}
 			}
 		}
 

@@ -112,6 +112,20 @@ namespace JSNodeMap {
 			return agentsAtNode;
 		}
 
+		public void HidePaths() {
+			Path[] tmp = nodeMap.GetPathsToNode(this);
+			for (int i = 0; i <= tmp.Length - 1; i++)
+            {
+				tmp[i].SetVisibleLine(false);
+            }
+
+		}
+
+		public int DeadEnd() {
+			Path[] tmp = GetPaths();
+			return tmp.Length;
+		}
+
 		public Node GetClosestNode(Agent agent = null, bool disallowOccupied = false, string type = null) {
 			Node closestNode = null;
 			float closestDist = Mathf.Infinity;
