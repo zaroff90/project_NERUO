@@ -262,7 +262,6 @@ namespace JSNodeMap {
 
 		public void HighlightRoute(List<Node> route)
 		{
-			Debug.Log(route.Count);
 			for (int i = 0; i < route.Count; i++)
 			{
 				Node node = route[i];

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using TMPro;
 
 namespace JSNodeMap {
 	[System.Serializable]
@@ -105,6 +106,19 @@ namespace JSNodeMap {
 
 				}
 			}
+			if (this.gameObject.name == "PlayerAgent")
+            {
+				if (other.gameObject.tag == "gem")
+                {
+					GameObject.Find("GameManager").GetComponent<TurnBasedManager>().points +=
+						int.Parse(other.gameObject.name);
+					other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+					other.gameObject.transform.GetChild(0).parent = null;
+					Destroy(other.gameObject);
+					GameObject.Find("points").GetComponent<TextMeshProUGUI>().text = "POINTS: " + GameObject.Find("GameManager").GetComponent<TurnBasedManager>().points;
+					this.GetComponent<AudioSource>().Play();
+				}
+            }
 		}
 
         private void OnTriggerExit(Collider other)

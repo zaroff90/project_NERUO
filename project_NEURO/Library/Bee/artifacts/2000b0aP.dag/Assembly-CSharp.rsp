@@ -294,6 +294,7 @@
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/UnityEngine.UI.ref.dll"
+"Assets/AurynSky/Gems Ultimate Pack/Scripts/AnimationScript.cs"
 "Assets/NodeMap/Demo/Scripts/AgentControls.cs"
 "Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs"
 "Assets/NodeMap/Scripts/Classes/Agent.cs"
@@ -311,6 +312,7 @@
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/PathLight.cs"
 "Assets/Starfield Skybox/Demo/Script/LookCamera.cs"
+"Assets/StarterParticles/RotateFlareHolder.cs"
 -langversion:9.0
 
 /deterministic

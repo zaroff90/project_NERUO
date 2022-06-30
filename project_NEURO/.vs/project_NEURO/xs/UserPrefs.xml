@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{58AD67C5-4613-8DFF-5B89-607014423C5B}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs">
     <Files>
-      <File FileName="Assets/NodeMap/Scripts/Classes/Agent.cs" Line="282" Column="1" />
-      <File FileName="Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs" Line="145" Column="52" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Agent.cs" Line="119" Column="46" />
+      <File FileName="Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs" Line="146" Column="42" />
       <File FileName="Assets/NodeMap/Scripts/Movement/DirectMove.cs" />
-      <File FileName="Assets/Scripts/CameraFollow.cs" />
-      <File FileName="Assets/NodeMap/Scripts/Classes/Node.cs" Line="133" Column="69" />
-      <File FileName="Assets/NodeMap/Scripts/Classes/Path.cs" Line="41" Column="23" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="27" Column="2" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Node.cs" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Path.cs" />
       <File FileName="Assets/NodeMap/Scripts/Classes/Map.cs" Line="265" Column="1" />
-      <File FileName="Assets/NodeMap/Scripts/Classes/Pathfinding.cs" Line="10" Column="1" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Pathfinding.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

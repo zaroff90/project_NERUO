@@ -20,6 +20,8 @@ public class TurnBasedManager : MonoBehaviour
     private float maxDistance = 1000f;
 
     public GameObject loseScreen;
+
+    public int points = 0;
     void Awake()
     {
         playerAgent = map.mapAgents.Find(a => a.agentType == 0);
@@ -28,7 +30,7 @@ public class TurnBasedManager : MonoBehaviour
 
         npcAgent = map.mapAgents.Find(a => a.agentType == 1);
         npcAgent.SetCurrentNodeByName("npcNode");
-        npcAgent.targetNode = GetRandomNpcTarget();
+        npcAgent.targetNode = map.GetNodeByName("startNode");
         npcAgent.OnNodeArrive += NpcNodeArrive;
         UpdateNpcStatus();
 
@@ -107,7 +109,8 @@ public class TurnBasedManager : MonoBehaviour
     }
     
     private void NpcNodeArrive(Node node, bool target)
-    {                    
+    {
+        npcAgent.targetNode = playerAgent.currentNode;
         // If we've arrived at target node, clear target
         if (target)
         {
@@ -140,7 +143,7 @@ public class TurnBasedManager : MonoBehaviour
 
     public IEnumerator TimeReset()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(2);
         npcAgent.targetNode = playerAgent.currentNode;
         npcAgent.MoveToTarget(npcAgent.targetNode);
         StartCoroutine(TimeReset());
