@@ -58,15 +58,10 @@ public class TurnBasedManager : MonoBehaviour
         Node targetNode = playerAgent.targetNode;
         // Clear old route
         map.ClearRouteHighlight();
+        map.current = playerAgent.currentNode;
+        List<Node> neighborNodes = Pathfinding.GetNeighbors(playerAgent.currentNode, playerAgent);
 
-        Path[] routes = currentNode.GetComponent<Node>().GetPaths();
-
-        for (int i=0; i < routes.Length; i++)
-        {
-            List<Node> route = Pathfinding.FindRoute(routes[i].GetComponent<Path>().fromNode, routes[i].GetComponent<Path>().toNode, playerAgent);
-
-            map.HighlightRoute(route);
-        }
+        map.HighlightRoute(neighborNodes);
 
     }
 
@@ -88,7 +83,7 @@ public class TurnBasedManager : MonoBehaviour
     {
         currentTurn++;
         GameObject.Find("turns").GetComponent<TextMeshProUGUI>().text = "TURNS: " + currentTurn;
-        playerAgent.currentNode.HidePaths();
+        //playerAgent.currentNode.HidePaths();
 
         // If we've arrived at target node, clear target
         if (target)
@@ -102,30 +97,25 @@ public class TurnBasedManager : MonoBehaviour
         // When player finishes moving, let the NPC move
         npcAgent.MoveToTarget(npcAgent.targetNode);
 
+        /*
         int count = playerAgent.currentNode.DeadEnd();
         if (count <= 0)
         {
             GameOver();
         }
-
+        */
     }
     
     private void NpcNodeArrive(Node node, bool target)
-    {
-        Debug.Log($"NPC arrive {node.nodeName}");
-        
-        currentTurn++;
-                
+    {                    
         // If we've arrived at target node, clear target
         if (target)
         {
-            Debug.Log("NPC reached target. Selecting new destination.");
-            npcAgent.targetNode = GetRandomNpcTarget();
+            npcAgent.targetNode = playerAgent.currentNode;
+            StartCoroutine(TimeReset());
         }
         
         // When NPC finishes moving, allow the player to set new destination or process next turn
-        isPlayerTurn = true;
-        UpdatePlayerStatus();
         UpdateNpcStatus();
     }
 
@@ -147,4 +137,12 @@ public class TurnBasedManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public IEnumerator TimeReset()
+    {
+        yield return new WaitForSeconds(.1f);
+        npcAgent.targetNode = playerAgent.currentNode;
+        npcAgent.MoveToTarget(npcAgent.targetNode);
+        StartCoroutine(TimeReset());
+        }
 }

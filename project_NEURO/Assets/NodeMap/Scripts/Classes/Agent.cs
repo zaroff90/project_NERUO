@@ -91,7 +91,6 @@ namespace JSNodeMap {
 		}
 
 		void OnTriggerEnter(Collider other) {
-            Debug.Log("hi");
             Agent otherAgent = other.GetComponent<Agent>();
             if (otherAgent)
             {
@@ -99,14 +98,28 @@ namespace JSNodeMap {
 				if (OnAgentCollide != null)
 				{
 					OnAgentCollide(otherAgent);
+				}
+				if (this.agentType != otherAgent.agentType)
+				{
 					GameObject.Find("GameManager").GetComponent<TurnBasedManager>().GameOver();
+
 				}
 			}
 		}
 
-		// Private methods
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.name == "pathShadow")
+            {
+				other.transform.parent.gameObject.GetComponent<Path>().SetVisibleLine(false);
+				other.transform.parent.gameObject.GetComponent<Path>().AddOverride(0, MovementType.Impassable);
+				nodeMap.ClearRouteHighlight();
+			}
+        }
 
-		private IEnumerator MoveToTarget() {
+        // Private methods
+
+        private IEnumerator MoveToTarget() {
 			while (doMoveToTarget && doMove) {
 				float moveDist = Time.deltaTime * movementSpeed * movementFactor;
 				distTraveled += moveDist;

@@ -116,7 +116,7 @@ namespace JSNodeMap {
 			Path[] tmp = nodeMap.GetPathsToNode(this);
 			for (int i = 0; i <= tmp.Length - 1; i++)
             {
-				tmp[i].SetVisibleLine(false);
+				//tmp[i].SetVisibleLine(false);
             }
 
 		}

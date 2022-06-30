@@ -34,6 +34,8 @@ namespace JSNodeMap {
 
 		public bool allPaused;
 
+		public Node current;
+
 		// Built-in
 		void OnValidate () {
 			defaultMarkerSpacing = Mathf.Max (0.01f, defaultMarkerSpacing);
@@ -260,6 +262,7 @@ namespace JSNodeMap {
 
 		public void HighlightRoute(List<Node> route)
 		{
+			Debug.Log(route.Count);
 			for (int i = 0; i < route.Count; i++)
 			{
 				Node node = route[i];
@@ -272,11 +275,18 @@ namespace JSNodeMap {
 				{
 					node.gameObject.GetComponent<SpriteRenderer>().material = nodeData.highlightMaterial;
 				}
-
+				Path path = FindValidPath(current, route[i]);
+				if (path != null)
+				{
+					path.line.material = nodeData.highlightMaterial;
+					path.drawLine = false;
+				}
 				// Highlight paths for all but last set of nodes
 				if (i != route.Count - 1)
 				{
-					Path path = FindValidPath(node, route[i + 1]);
+
+
+					/*
 					Marker[] markers = path.transform.GetComponentsInChildren<Marker>();
 					if (drawMode == DrawMode.Object)
 					{
@@ -292,7 +302,7 @@ namespace JSNodeMap {
 							marker.GetComponent<SpriteRenderer>().material = nodeData.highlightMaterial;
 						}
 					}
-					path.line.material = nodeData.highlightMaterial;
+					*/
 				}
 			}
 		}
