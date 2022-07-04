@@ -363,7 +363,7 @@
 "Assets/Starfield Skybox/Demo/Script/LookCamera.cs"
 "Assets/StarterParticles/RotateFlareHolder.cs"
 -langversion:9.0
-
+/unsafe+
 /deterministic
 /optimize-
 /debug:portable

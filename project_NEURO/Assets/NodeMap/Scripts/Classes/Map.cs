@@ -268,11 +268,11 @@ namespace JSNodeMap {
 				
 				if (drawMode == DrawMode.Object)
 				{
-					node.gameObject.GetComponent<MeshRenderer>().material = nodeData.highlightMaterial;
+					//node.gameObject.GetComponent<MeshRenderer>().material = nodeData.highlightMaterial;
 				}
 				else
 				{
-					node.gameObject.GetComponent<SpriteRenderer>().material = nodeData.highlightMaterial;
+					//node.gameObject.GetComponent<SpriteRenderer>().material = nodeData.highlightMaterial;
 				}
 				Path path = FindValidPath(current, route[i]);
 				if (path != null)

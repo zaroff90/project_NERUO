@@ -368,7 +368,7 @@
 "Assets/NodeMap/Editor/NodeEditor.cs"
 "Assets/NodeMap/Editor/PathEditor.cs"
 -langversion:9.0
-
+/unsafe+
 /deterministic
 /optimize-
 /debug:portable

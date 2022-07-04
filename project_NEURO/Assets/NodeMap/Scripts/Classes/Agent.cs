@@ -121,15 +121,12 @@ namespace JSNodeMap {
             }
 		}
 
-        private void OnTriggerExit(Collider other)
+        public void RemovePath(Path currentPath)
         {
-            if (other.gameObject.name == "pathShadow")
-            {
-				other.transform.parent.gameObject.GetComponent<Path>().SetVisibleLine(false);
-				other.transform.parent.gameObject.GetComponent<Path>().AddOverride(0, MovementType.Impassable);
-				nodeMap.ClearRouteHighlight();
-			}
-        }
+			currentPath.SetVisibleLine(false);
+			currentPath.AddOverride(0, MovementType.Impassable);
+			nodeMap.ClearRouteHighlight();
+		}
 
         // Private methods
 

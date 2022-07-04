@@ -83,6 +83,7 @@ public class TurnBasedManager : MonoBehaviour
     
     private void PlayerNodeArrive(Node node, bool target)
     {
+        playerAgent.RemovePath(playerAgent.onPath);
         currentTurn++;
         GameObject.Find("turns").GetComponent<TextMeshProUGUI>().text = "TURNS: " + currentTurn;
         //playerAgent.currentNode.HidePaths();
@@ -106,6 +107,8 @@ public class TurnBasedManager : MonoBehaviour
             GameOver();
         }
         */
+
+        
     }
     
     private void NpcNodeArrive(Node node, bool target)
