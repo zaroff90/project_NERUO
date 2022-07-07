@@ -1,5 +1,6 @@
 sceneSetups:
-- path: Assets/NodeMap/Demo/TurnBasedDemo.unity
+- path: Assets/Infinity Code/Online maps/Examples/Scenes/Behaviours/Car Drive By
+    Route.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
