@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{58AD67C5-4613-8DFF-5B89-607014423C5B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Infinity Code/Online maps/Examples/Scripts/DriveToPointByRoute.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraFollow.cs">
     <Files>
-      <File FileName="Assets/Infinity Code/Online maps/Examples/Scripts/DriveToPointByRoute.cs" Line="45" Column="1" />
-      <File FileName="Assets/Infinity Code/Online maps/Scripts/Plugins/OnlineMapsKeyManager.cs" />
-      <File FileName="Assets/Infinity Code/Online maps/Scripts/Drawing/Managers/OnlineMapsDrawingElementManager.cs" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Map.cs" Line="149" Column="6" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Agent.cs" />
+      <File FileName="Assets/NodeMap/Demo/Scripts/TurnBasedManager.cs" />
+      <File FileName="Assets/NodeMap/Scripts/Classes/Pathfinding.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

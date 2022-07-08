@@ -435,79 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f2cfe9365da3b4da8d6b60e10f8184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _items:
-  - label: 
-    range:
-      max: 20.999
-      min: 1
-      maxLimit: 20.999
-      minLimit: 1
-    tags: []
-    _enabled: 1
-    latitude: 29.840382
-    longitude: -95.7176244
-    _scale: 5
-    expand: 1
-    altitudeType: 0
-    checkMapBoundaries: 1
-    inited: 1
-    prefab: {fileID: 1698319356130682, guid: 7b057c99890f1da429a53758c525220e, type: 3}
-    sizeType: 0
-    _rotationY: 96.90463
-  - label: 
-    range:
-      max: 20.999
-      min: 1
-      maxLimit: 20.999
-      minLimit: 1
-    tags: []
-    _enabled: 1
-    latitude: 29.83115
-    longitude: -95.720047
-    _scale: 5
-    expand: 1
-    altitudeType: 0
-    checkMapBoundaries: 1
-    inited: 1
-    prefab: {fileID: 1577185846674754, guid: 22669a8aeed53904983e77db5adca123, type: 3}
-    sizeType: 0
-    _rotationY: 0
-  - label: 
-    range:
-      max: 20.999
-      min: 1
-      maxLimit: 20.999
-      minLimit: 1
-    tags: []
-    _enabled: 1
-    latitude: 29.80219
-    longitude: -95.75246
-    _scale: 1
-    expand: 1
-    altitudeType: 0
-    checkMapBoundaries: 1
-    inited: 1
-    prefab: {fileID: 1577185846674754, guid: 22669a8aeed53904983e77db5adca123, type: 3}
-    sizeType: 0
-    _rotationY: 0
-  - label: 
-    range:
-      max: 20.999
-      min: 1
-      maxLimit: 20.999
-      minLimit: 1
-    tags: []
-    _enabled: 1
-    latitude: 29.85052
-    longitude: -95.71808
-    _scale: 1
-    expand: 1
-    altitudeType: 0
-    checkMapBoundaries: 1
-    inited: 1
-    prefab: {fileID: 0}
-    sizeType: 0
-    _rotationY: 0
+  _items: []
   defaultScale: 1
   allowAddMarker3DByN: 1
   defaultPrefab: {fileID: 0}
@@ -538,7 +466,7 @@ MonoBehaviour:
   lockRedraw: 0
   needRedraw: 1
   notInteractUnderGUI: 1
-  mapType: google.satellite
+  mapType: google.relief
   osmServer: 0
   proxyURL: http://service.infinity-code.com/redirect.php?
   redrawOnPlay: 1
@@ -556,8 +484,8 @@ MonoBehaviour:
   useProxy: 1
   useSoftwareJPEGDecoder: 0
   width: 1024
-  _activeTypeSettings: 12Tile version1513902
-  _zoom: 17
+  _activeTypeSettings: 
+  _zoom: 12.33
   latitude: 29.840382
   longitude: -95.7176244
 --- !u!4 &1504040502
@@ -588,12 +516,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9242c97787e7c454d85cf28d8c0cb39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1698319356130682, guid: 7b057c99890f1da429a53758c525220e, type: 3}
+  prefab: {fileID: 1577185846674754, guid: 22669a8aeed53904983e77db5adca123, type: 3}
   markerScale: 5
   targetPrefab: {fileID: 1577185846674754, guid: 22669a8aeed53904983e77db5adca123, type: 3}
   targetScale: 5
   speed: 90
   rotation: 180
+  posLat: []
+  posLng: []
+  targets:
+  - {x: 29.840382, y: -95.71762}
+  - {x: 29.83115, y: -95.72005}
+  - {x: 29.80219, y: -95.75246}
+  - {x: 29.85052, y: -95.71808}
+  - {x: 50.85052, y: -95.71808}
 --- !u!114 &1504040504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +810,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2041144587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041144591}
+  - component: {fileID: 2041144590}
+  - component: {fileID: 2041144589}
+  - component: {fileID: 2041144588}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2041144588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041144587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2041144589
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041144587}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2041144590
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041144587}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2041144591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041144587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -880.2385, y: 0.66673785, z: 1053.8802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053120082
 GameObject:

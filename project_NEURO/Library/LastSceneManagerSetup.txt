@@ -1,6 +1,5 @@
 sceneSetups:
-- path: Assets/Infinity Code/Online maps/Examples/Scenes/Behaviours/Car Drive By
-    Route.unity
+- path: Assets/Scenes/HoustonDowntown.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

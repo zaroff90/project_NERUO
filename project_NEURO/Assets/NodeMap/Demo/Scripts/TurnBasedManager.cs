@@ -24,13 +24,14 @@ public class TurnBasedManager : MonoBehaviour
     public int points = 0;
     void Awake()
     {
-        playerAgent = map.mapAgents.Find(a => a.agentType == 0);
+        map = GameObject.Find("NodeMap").GetComponent<Map>();
+        playerAgent = GameObject.Find("PlayerAgent").GetComponent<Agent>();
         playerAgent.OnNodeArrive += PlayerNodeArrive;
-        playerAgent.SetCurrentNodeByName("startNode");
+        playerAgent.SetCurrentNodeByName("Node 0");
 
-        npcAgent = map.mapAgents.Find(a => a.agentType == 1);
-        npcAgent.SetCurrentNodeByName("npcNode");
-        npcAgent.targetNode = map.GetNodeByName("startNode");
+        npcAgent = GameObject.Find("NPCAgent").GetComponent<Agent>();
+        npcAgent.SetCurrentNodeByName("Node 1");
+        npcAgent.targetNode = map.GetNodeByName("Node 0");
         npcAgent.OnNodeArrive += NpcNodeArrive;
         UpdateNpcStatus();
 

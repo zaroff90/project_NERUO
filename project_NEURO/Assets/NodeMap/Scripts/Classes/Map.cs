@@ -146,7 +146,7 @@ namespace JSNodeMap {
 			newNodeObj.transform.localScale = new Vector3(nodeScale, nodeScale, nodeScale);
 			Quaternion objRot = (drawMode == DrawMode.Object) ? Quaternion.identity : Quaternion.Euler (90f, 0f, 0f);
 			newNodeObj.transform.localRotation = objRot;
-			newNodeObj.isStatic = true;
+			//newNodeObj.isStatic = true;
 
 			Node newNode = newNodeObj.AddComponent<Node> ();
 			newNode.Initialize (this);
