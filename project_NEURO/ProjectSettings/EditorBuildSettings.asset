@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/NodeMap/Demo/TurnBasedDemo.unity
-    guid: 9a358105a9308b943a3a297800cba5dc
+    path: Assets/Scenes/HoustonDowntown.unity
+    guid: c397cac09c79f462fa718e9e2d28fa88
   m_configObjects: {}
