@@ -30,7 +30,7 @@ namespace JSNodeMap {
 
 		public List<MovementOverride> movementOverrides;
 
-		public int markerType = 0;
+		public int markerType = 1;
 		public float markerSpacing;
 
 		public List<float> markerPosList;
